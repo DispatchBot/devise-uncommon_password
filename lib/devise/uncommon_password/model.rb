@@ -26,11 +26,7 @@ module Devise
 
       def not_common_password
         if Devise::Models::UncommonPassword.common_passwords.include? password.downcase
-          errors.add(:password, def not_common_password
-            if Devise::Models::UncommonPassword.common_passwords.include? password.downcase
-              errors.add(:password, I18n.t('errors.messages.common_password'))
-            end
-          end)
+          errors.add(:password, I18n.t('errors.messages.common_password'))
         end
       end
     end
