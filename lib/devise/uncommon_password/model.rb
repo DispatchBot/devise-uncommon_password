@@ -1,3 +1,4 @@
+
 module Devise
   module Models
     # The UncommonPassword module adds a new validation for Devise Models.
@@ -26,7 +27,7 @@ module Devise
 
       def not_common_password
         if Devise::Models::UncommonPassword.common_passwords.include? password.downcase
-          errors.add(:password, "is a very common password. Please choose something harder to guess.")
+          errors.add(:password, I18n.t('errors.messages.common_password'))
         end
       end
     end
