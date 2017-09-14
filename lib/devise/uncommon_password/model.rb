@@ -1,3 +1,4 @@
+
 module Devise
   module Models
     # The UncommonPassword module adds a new validation for Devise Models.
